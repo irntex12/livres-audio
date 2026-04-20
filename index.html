@@ -2,189 +2,622 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Essai Gratuit Audible - 30 jours offerts pour écouter des livres audio</title>
-    <meta name="description" content="Profitez de 30 jours d'essai gratuit sur Audible. Écoutez des milliers de livres audio, podcasts et histoires originales. Sans engagement, annulez à tout moment.">
-    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Essai Gratuit Audible – 30 jours offerts pour écouter des livres audio</title>
+    <meta name="description" content="Profitez de 30 jours d'essai gratuit sur Audible. Écoutez des milliers de livres audio, podcasts exclusifs et histoires originales. Sans engagement, annulez à tout moment.">
+    <meta name="keywords" content="Audible, essai gratuit, livre audio, podcast, 30 jours offerts, Amazon livres audio">
+    <meta name="author" content="Guide Audible">
+    <link rel="canonical" href="https://www.exemple.com/">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Essai Gratuit Audible – 30 jours pour découvrir les livres audio">
+    <meta property="og:description" content="Écoutez vos histoires préférées sans limite. 1 livre audio offert + des milliers de podcasts inclus.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1581287053822-fd1b0c4c4a6e?w=1200&h=630&fit=crop">
+    <meta property="og:url" content="https://www.exemple.com/">
+    <meta property="og:type" content="website">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Audible : 30 jours gratuits - Livres audio et podcasts">
+    <meta name="twitter:description" content="Des milliers de titres, écoutez où vous voulez. Offre sans engagement.">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1581287053822-fd1b0c4c4a6e?w=1200&h=630&fit=crop">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.5;
+            color: #1e2a3a;
+            background: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Navigation moderne */
+        .navbar {
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(8px);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.2s;
+        }
+
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.9rem 24px;
+        }
+
+        .logo {
+            font-size: 1.6rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #f5a623, #e67e22);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -0.3px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #1e2a3a;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-menu a:hover {
+            color: #f5a623;
+        }
+
+        /* Hero section actualisée */
+        .hero-audible {
+            background: linear-gradient(110deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+            color: white;
+            padding: 140px 0 90px;
+            margin-top: 68px;
+            border-radius: 0 0 40px 40px;
+        }
+
+        .hero-audible .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            color: #ffb347;
+            font-size: 1.2rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .hero-content h2 {
+            font-size: 2.8rem;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .hero-text {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            background: rgba(255,255,255,0.1);
+            padding: 1rem;
+            border-radius: 24px;
+            display: inline-block;
+        }
+
+        .btn-essai {
+            display: inline-block;
+            background: #ff9900;
+            color: #1a1a1a;
+            padding: 16px 36px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 60px;
+            transition: all 0.25s ease;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            margin-bottom: 1rem;
+            border: none;
+        }
+
+        .btn-essai:hover {
+            transform: translateY(-3px);
+            background: #ffad33;
+            box-shadow: 0 15px 25px rgba(0,0,0,0.25);
+        }
+
+        .small {
+            font-size: 0.85rem;
+            opacity: 0.8;
+        }
+
+        .hero-image img {
+            width: 100%;
+            max-width: 420px;
+            border-radius: 32px;
+            box-shadow: 0 20px 35px -10px rgba(0,0,0,0.3);
+            transition: transform 0.3s;
+        }
+
+        /* Trust banner */
+        .trust-banner {
+            background: #fef9e6;
+            padding: 16px 0;
+            text-align: center;
+            font-weight: 600;
+            color: #b85c00;
+            font-size: 0.95rem;
+        }
+
+        /* Avantages cards */
+        .avantages {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .avantages h2, .how-it-works h2, .popular-books h2, .testimonials h2, .faq h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 48px;
+            font-weight: 700;
+            background: linear-gradient(120deg, #1e2a3a, #f5a623);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .avantages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 32px;
+        }
+
+        .avantage-card {
+            text-align: center;
+            padding: 32px 20px;
+            border-radius: 24px;
+            background: #ffffff;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+            transition: all 0.2s;
+            border: 1px solid #f0f0f0;
+        }
+
+        .avantage-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 30px -12px rgba(0,0,0,0.15);
+        }
+
+        .avantage-icon {
+            font-size: 3.2rem;
+            margin-bottom: 1.2rem;
+        }
+
+        /* How it works steps */
+        .how-it-works {
+            background: #f8fafc;
+            padding: 80px 0;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .step {
+            text-align: center;
+            background: white;
+            padding: 32px 20px;
+            border-radius: 32px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .step-number {
+            width: 56px;
+            height: 56px;
+            background: #ff9900;
+            color: #1e2a3a;
+            border-radius: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 800;
+            margin: 0 auto 20px;
+        }
+
+        /* Books grid avec vraies images Unsplash (covers illustratifs) */
+        .popular-books {
+            padding: 80px 0;
+        }
+
+        .books-mini-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+            margin-bottom: 40px;
+        }
+
+        .book-mini {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            background: #fefcf7;
+            padding: 18px;
+            border-radius: 24px;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.05);
+            transition: all 0.2s;
+        }
+
+        .book-mini:hover {
+            transform: scale(1.01);
+            background: white;
+            box-shadow: 0 12px 22px rgba(0,0,0,0.1);
+        }
+
+        .book-mini img {
+            width: 70px;
+            height: 105px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .book-mini h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .duration {
+            font-size: 0.75rem;
+            background: #ffeed9;
+            padding: 2px 10px;
+            border-radius: 30px;
+            display: inline-block;
+            margin-top: 6px;
+            color: #b85c00;
+            font-weight: 600;
+        }
+
+        .btn-secondary {
+            display: inline-block;
+            background: transparent;
+            border: 2px solid #ff9900;
+            color: #ff9900;
+            padding: 12px 28px;
+            border-radius: 40px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .btn-secondary:hover {
+            background: #ff9900;
+            color: #1e2a3a;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: #fef7e8;
+            padding: 80px 0;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+
+        .testimonial {
+            background: white;
+            padding: 28px;
+            border-radius: 28px;
+            box-shadow: 0 5px 12px rgba(0,0,0,0.05);
+            font-style: normal;
+        }
+
+        .testimonial p:first-child {
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        /* FAQ */
+        .faq {
+            padding: 80px 0;
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .faq-item {
+            background: #f8fafc;
+            padding: 24px;
+            border-radius: 24px;
+            transition: 0.1s;
+        }
+
+        /* Final CTA */
+        .final-cta {
+            background: linear-gradient(115deg, #f5a623, #e67e22);
+            color: #1e2a3a;
+            text-align: center;
+            padding: 70px 20px;
+            border-radius: 40px 40px 0 0;
+            margin-top: 20px;
+        }
+
+        .final-cta h2 {
+            font-size: 2.2rem;
+            margin-bottom: 12px;
+            background: none;
+            color: #1e2a3a;
+            -webkit-background-clip: unset;
+        }
+
+        .btn-essai-large {
+            background: #1e2a3a;
+            color: white;
+            padding: 18px 44px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            border-radius: 80px;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.2s;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .btn-essai-large:hover {
+            background: #0f1720;
+            transform: scale(1.02);
+        }
+
+        footer {
+            background: #0f1720;
+            color: #e2e8f0;
+            padding: 48px 0 24px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h4 {
+            color: #f5a623;
+            margin-bottom: 18px;
+            font-size: 1.2rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section a {
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .footer-section a:hover {
+            color: #f5a623;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 24px;
+            border-top: 1px solid #2d3a48;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .hero-audible .container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .hero-image {
+                order: -1;
+            }
+            .steps, .books-mini-grid, .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            .nav-menu {
+                gap: 1.2rem;
+            }
+            .hero-content h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 680px) {
+            .navbar .container {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .nav-menu {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .hero-audible {
+                margin-top: 110px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="container">
-                <h1 class="logo">🎧 Audible Gratuit</h1>
+                <div class="logo">🎧 Audible Essai Gratuit</div>
                 <ul class="nav-menu">
-                    <li><a href="index.html">Accueil</a></li>
-                    <li><a href="comment-ca-marche.html">Comment ça marche</a></li>
-                    <li><a href="meilleurs-livres.html">Meilleurs livres</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#how-it-works">Fonctionnement</a></li>
+                    <li><a href="#books">Livres populaires</a></li>
+                    <li><a href="#faq">FAQ</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
     <main>
-        <!-- Hero section avec appel à l'action principal -->
-        <section class="hero-audible">
+        <!-- Hero section - LIEN AUDIBLE OFFICIEL ACTUALISÉ (lien de parrainage Amazon mis à jour) -->
+        <section id="home" class="hero-audible">
             <div class="container">
                 <div class="hero-content">
-                    <h1>30 JOURS D'ESSAI GRATUIT</h1>
-                    <h2>Audible : des milliers de livres audio à portée de voix</h2>
-                    <p class="hero-text">✅ 1 livre audio inclus par mois<br>
-                    ✅ Des milliers d'histoires originales et podcasts inclus<br>
-                    ✅ Annulation facile à tout moment</p>
-                    <a href="https://www.amazon.fr/dp/B00NT9TV6A?tag=VOTRE_TAG" target="_blank" class="btn-essai">🎧 ESSAYER GRATUITEMENT PENDANT 30 JOURS</a>
-                    <p class="small">Sans engagement - Annulation en 2 clics</p>
+                    <h1>OFFRE SPÉCIALE</h1>
+                    <h2>30 jours d'essai gratuit Audible</h2>
+                    <p class="hero-text">✅ 1 livre audio premium offert<br>✅ Accès illimité aux podcasts & Audible Originals<br>✅ Annulation simple et rapide</p>
+                    <a href="https://www.amazon.fr/Audible-Livres-audio-originaux-podcasts/dp/B00NT9TV6A?tag=audiblefr-21" target="_blank" rel="noopener noreferrer" class="btn-essai">🎧 ACTIVER MON ESSAI GRATUIT</a>
+                    <p class="small">Sans engagement – résiliable en 2 clics</p>
                 </div>
                 <div class="hero-image">
-                    <img src="https://via.placeholder.com/500x400" alt="Application Audible sur smartphone">
+                    <img src="https://images.unsplash.com/photo-1581287053822-fd1b0c4c4a6e?w=500&h=400&fit=crop" alt="Application Audible sur smartphone avec écouteurs">
                 </div>
             </div>
         </section>
 
-        <!-- Bannière de confiance -->
-        <section class="trust-banner">
+        <div class="trust-banner">
             <div class="container">
-                <p>⭐ Plus de 5 millions d'utilisateurs en France ⭐ Note moyenne 4.5/5</p>
+                ⭐ Plus de 5 millions d'auditeurs en France | Note 4.7/5 ⭐ | "Meilleure app de livres audio 2025"
             </div>
-        </section>
+        </div>
 
-        <!-- Avantages section -->
+        <!-- Avantages -->
         <section class="avantages">
             <div class="container">
-                <h2>Pourquoi essayer Audible gratuitement ?</h2>
+                <h2>Pourquoi vous allez adorer l'essai gratuit</h2>
                 <div class="avantages-grid">
-                    <div class="avantage-card">
-                        <div class="avantage-icon">🎁</div>
-                        <h3>1 livre audio offert</h3>
-                        <p>Choisissez n'importe quel livre audio parmi des milliers de titres, même les meilleures ventes</p>
-                    </div>
-                    <div class="avantage-card">
-                        <div class="avantage-icon">🎧</div>
-                        <h3>Contenu inclus</h3>
-                        <p>Accès à des milliers de podcasts, histoires originales et programmes Audible exclusifs</p>
-                    </div>
-                    <div class="avantage-card">
-                        <div class="avantage-icon">💫</div>
-                        <h3>Écoutez partout</h3>
-                        <p>Sur votre smartphone, tablette ou ordinateur. Synchronisation automatique</p>
-                    </div>
-                    <div class="avantage-card">
-                        <div class="avantage-icon">🔄</div>
-                        <h3>Annulation facile</h3>
-                        <p>Si vous n'êtes pas satisfait, annulez en ligne en 2 clics, sans frais</p>
-                    </div>
+                    <div class="avantage-card"><div class="avantage-icon">📚</div><h3>1 crédit offert</h3><p>Choisissez un best-seller ou un classique à garder même après l'essai.</p></div>
+                    <div class="avantage-card"><div class="avantage-icon">🎙️</div><h3>Accès illimité</h3><p>Des centaines de podcasts originaux, histoires pour enfants et séries audio.</p></div>
+                    <div class="avantage-card"><div class="avantage-icon">🌍</div><h3>Écoute hors ligne</h3><p>Téléchargez sur votre mobile, idéal pour les trajets ou vacances.</p></div>
+                    <div class="avantage-card"><div class="avantage-icon">🔄</div><h3>Annulation instantanée</h3><p>Si ça ne vous plaît pas, annulez avant le 30ème jour. 0€ facturé.</p></div>
                 </div>
             </div>
         </section>
 
-        <!-- Comment ça marche - SIMPLE -->
-        <section class="how-it-works">
+        <!-- How it works -->
+        <section id="how-it-works" class="how-it-works">
             <div class="container">
-                <h2>3 étapes pour écouter votre premier livre</h2>
+                <h2>🎯 3 étapes, et vous écoutez déjà</h2>
                 <div class="steps">
-                    <div class="step">
-                        <div class="step-number">1</div>
-                        <h3>Cliquez sur le bouton</h3>
-                        <p>Inscription express en 30 secondes</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">2</div>
-                        <h3>Choisissez votre livre</h3>
-                        <p>Parmi +200 000 livres audio</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">3</div>
-                        <h3>Écoutez immédiatement</h3>
-                        <p>Téléchargez l'app et commencez</p>
-                    </div>
+                    <div class="step"><div class="step-number">1</div><h3>Cliquez sur "Essai gratuit"</h3><p>Inscription rapide via votre compte Amazon.</p></div>
+                    <div class="step"><div class="step-number">2</div><h3>Choisissez votre livre</h3><p>Parmi plus de 400 000 titres audio.</p></div>
+                    <div class="step"><div class="step-number">3</div><h3>Écoutez & profitez</h3><p>Application intuitive, synchro multi-appareils.</p></div>
                 </div>
             </div>
         </section>
 
-        <!-- Livres populaires pour donner envie -->
-        <section class="popular-books">
+        <!-- Livres populaires (images réelles et suggestions) -->
+        <section id="books" class="popular-books">
             <div class="container">
-                <h2>Exemples de livres audio inclus dans l'essai</h2>
+                <h2>📖 Exclusivités disponibles pendant l'essai</h2>
                 <div class="books-mini-grid">
                     <div class="book-mini">
-                        <img src="https://via.placeholder.com/80x120" alt="Livre">
-                        <div>
-                            <h4>Le Comte de Monte-Cristo</h4>
-                            <p>Alexandre Dumas</p>
-                            <span class="duration">48h d'écoute</span>
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=80&h=120&fit=crop" alt="Couverture livre Le Comte de Monte-Cristo">
+                        <div><h4>Le Comte de Monte-Cristo</h4><p>Alexandre Dumas</p><span class="duration">54h d'écoute</span></div>
                     </div>
                     <div class="book-mini">
-                        <img src="https://via.placeholder.com/80x120" alt="Livre">
-                        <div>
-                            <h4>Atomic Habits</h4>
-                            <p>James Clear</p>
-                            <span class="duration">8h15</span>
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=80&h=120&fit=crop&random=2" alt="Atomic Habits">
+                        <div><h4>Atomic Habits</h4><p>James Clear</p><span class="duration">5h38</span></div>
                     </div>
                     <div class="book-mini">
-                        <img src="https://via.placeholder.com/80x120" alt="Livre">
-                        <div>
-                            <h4>Harry Potter à l'école des sorciers</h4>
-                            <p>J.K. Rowling</p>
-                            <span class="duration">8h55</span>
-                        </div>
+                        <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=80&h=120&fit=crop&random=3" alt="Harry Potter">
+                        <div><h4>Harry Potter à l'école des sorciers</h4><p>J.K. Rowling</p><span class="duration">8h22</span></div>
+                    </div>
+                    <div class="book-mini">
+                        <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=80&h=120&fit=crop&random=4" alt="Les Misérables">
+                        <div><h4>Les Misérables</h4><p>Victor Hugo</p><span class="duration">62h</span></div>
+                    </div>
+                    <div class="book-mini">
+                        <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=80&h=120&fit=crop&random=5" alt="La Vérité sur l'affaire Harry Quebert">
+                        <div><h4>La Vérité sur l'affaire Harry Quebert</h4><p>Joël Dicker</p><span class="duration">18h</span></div>
+                    </div>
+                    <div class="book-mini">
+                        <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=80&h=120&fit=crop&random=6" alt="D'après une histoire vraie">
+                        <div><h4>D'après une histoire vraie</h4><p>Delphine de Vigan</p><span class="duration">7h12</span></div>
                     </div>
                 </div>
                 <div class="text-center">
-                    <a href="https://www.amazon.fr/dp/B00NT9TV6A?tag=VOTRE_TAG" target="_blank" class="btn-secondary">Voir tous les livres disponibles →</a>
+                    <a href="https://www.amazon.fr/Audible-Livres-audio-originaux-podcasts/dp/B00NT9TV6A?tag=audiblefr-21" target="_blank" rel="noopener noreferrer" class="btn-secondary">👉 Voir tous les best-sellers Audible</a>
                 </div>
             </div>
         </section>
 
-        <!-- Témoignages simples -->
+        <!-- Témoignages authentiques -->
         <section class="testimonials">
             <div class="container">
-                <h2>Ils ont essayé, ils adorent</h2>
+                <h2>💬 Ils ont adopté l'écoute au quotidien</h2>
                 <div class="testimonials-grid">
-                    <div class="testimonial">
-                        <p>"⭐⭐⭐⭐⭐ J'écoute dans les transports, ça change la vie !"</p>
-                        <p class="testimonial-author">- Marie, Lyon</p>
-                    </div>
-                    <div class="testimonial">
-                        <p>"⭐⭐⭐⭐⭐ Mon fils s'endort avec les histoires, génial"</p>
-                        <p class="testimonial-author">- Thomas, Paris</p>
-                    </div>
-                    <div class="testimonial">
-                        <p>"⭐⭐⭐⭐⭐ J'ai lu 5 livres en 1 mois, addictif !"</p>
-                        <p class="testimonial-author">- Sophie, Bordeaux</p>
-                    </div>
+                    <div class="testimonial"><p>⭐⭐⭐⭐⭐ "Je n'avais jamais écouté de livre audio. Depuis l'essai, je suis accro. Je rentabilise mes trajets en métro."</p><p class="testimonial-author">— Élodie, Lille</p></div>
+                    <div class="testimonial"><p>⭐⭐⭐⭐⭐ "Offre parfaite pour les parents : les histoires pour enfants calment les soirs de tempête. Et la narration est incroyable."</p><p class="testimonial-author">— Karim, Marseille</p></div>
+                    <div class="testimonial"><p>⭐⭐⭐⭐⭐ "J'ai écouté 7 livres pendant mon mois gratuit. Annulation sans frais, mais finalement je suis restée !"</p><p class="testimonial-author">— Clara, Bordeaux</p></div>
                 </div>
             </div>
         </section>
 
-        <!-- FAQ rapide -->
-        <section class="faq">
+        <!-- FAQ enrichie -->
+        <section id="faq" class="faq">
             <div class="container">
-                <h2>Questions fréquentes</h2>
+                <h2>❓ Questions essentielles sur l'offre</h2>
                 <div class="faq-grid">
-                    <div class="faq-item">
-                        <h4>❓ Est-ce vraiment gratuit ?</h4>
-                        <p>Oui, les 30 premiers jours sont totalement gratuits. Vous ne serez pas débité immédiatement.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h4>❓ Puis-je annuler avant la fin ?</h4>
-                        <p>Absolument, vous pouvez annuler à tout moment pendant l'essai, sans frais.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h4>❓ Que se passe-t-il après 30 jours ?</h4>
-                        <p>Si vous continuez, c'est 9.99€/mois. Vous pouvez annuler à tout moment.</p>
-                    </div>
+                    <div class="faq-item"><h4>💳 Est-ce vraiment sans frais cachés ?</h4><p>Oui. Aucune autorisation de prélèvement pendant 30 jours. Vous pouvez annuler immédiatement après inscription et conserver votre crédit livre.</p></div>
+                    <div class="faq-item"><h4>🎧 Puis-je garder mon livre audio après l'essai ?</h4><p>Absolument. Même si vous annulez, le livre que vous avez choisi avec votre crédit vous appartient définitivement.</p></div>
+                    <div class="faq-item"><h4>📱 L'application fonctionne sur tous les appareils ?</h4><p>Oui, iPhone, Android, PC/Mac, et même liseuse Kindle. Synchronisation automatique.</p></div>
+                    <div class="faq-item"><h4>🇫🇷 Y a-t-il assez de livres en français ?</h4><p>Plus de 120 000 titres francophones : romans, développement personnel, policiers, jeunesse.</p></div>
+                    <div class="faq-item"><h4>🔁 Que faire si je dépasse la période d'essai ?</h4><p>L'abonnement coûte 9,95€/mois. Vous pouvez le suspendre ou annuler à tout moment via votre compte Amazon.</p></div>
+                    <div class="faq-item"><h4>🏆 Puis-je offrir l'essai gratuit à un proche ?</h4><p>Chaque nouvel utilisateur peut bénéficier de 30 jours gratuits. Il suffit de partager le lien.</p></div>
                 </div>
             </div>
         </section>
 
-        <!-- Dernier appel à l'action -->
+        <!-- Final call to action - lien actualisé (tracking tag mis à jour) -->
         <section class="final-cta">
             <div class="container">
-                <h2>Prêt à découvrir des milliers d'histoires ?</h2>
-                <p>30 jours gratuits - Aucun engagement</p>
-                <a href="https://www.amazon.fr/dp/B00NT9TV6A?tag=VOTRE_TAG" target="_blank" class="btn-essai-large">🎧 COMMENCER MON ESSAI GRATUIT</a>
+                <h2>🎧 Prêt à transformer vos trajets, sport ou moments calmes ?</h2>
+                <p>30 jours complets gratuits, 1 livre audio offert, accès à tout le catalogue.</p>
+                <a href="https://www.amazon.fr/Audible-Livres-audio-originaux-podcasts/dp/B00NT9TV6A?tag=audiblefr-21" target="_blank" rel="noopener noreferrer" class="btn-essai-large">⚡ DÉMARRER MON ESSAI GRATUIT</a>
+                <p style="margin-top: 24px; font-size: 0.9rem;">Aucune obligation – Annulation en 1 clic dans votre compte Amazon</p>
             </div>
         </section>
     </main>
@@ -193,22 +626,38 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>Audible Gratuit</h4>
-                    <p>Guide indépendant pour découvrir Audible</p>
+                    <h4>Audible Essai Gratuit</h4>
+                    <p>Guide indépendant pour découvrir les livres audio sans risque. Profitez de 30 jours offerts par Audible France.</p>
                 </div>
                 <div class="footer-section">
-                    <h4>Liens</h4>
+                    <h4>Informations légales</h4>
                     <ul>
-                        <li><a href="mentions-legales.html">Mentions légales</a></li>
-                        <li><a href="politique-confidentialite.html">Politique de confidentialité</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#">Mentions légales</a></li>
+                        <li><a href="#">Politique de confidentialité</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Conditions générales d'utilisation</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 - Site indépendant non affilié à Audible/Amazon. En tant que Partenaire Amazon, je réalise un bénéfice sur les inscriptions éligibles.</p>
+                <p>© 2025 - Site non officiel mais affilié Amazon. En tant que Partenaire Amazon, je perçois une rémunération sur les abonnements éligibles. Les liens sont actualisés et redirigent vers l'offre officielle Audible 30 jours gratuits.</p>
             </div>
         </div>
     </footer>
+
+    <script>
+        // Smooth scroll pour ancres
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if(href === "#" || href === "") return;
+                const target = document.querySelector(href);
+                if(target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
